@@ -28,7 +28,7 @@ export default function Range(props: Range) {
       <label htmlFor={id}>{label}</label>
       <div className="input-box-container">
         <div className="input-box-left">
-          <input type="range" id={id} name={id} min={min} max={max} step={step} value={currentValue} onChange={handleValueChange} />
+          <input type="range" id={id} name={id} min={min} max={max} step={step} value={currentValue} onChange={(e) => handleValueChange(e.target.value)} />
         </div>
         <div className="input-box-right">{currentValue}</div>
         <button onClick={() => handleResetField(defaultValue)}>reset</button>

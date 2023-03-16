@@ -18,10 +18,10 @@ export default function App() {
       min: 0,
       max: 360,
       step: 1,
-      onValueChange: (e) => {
-        setRotateValue(e.target.value)
+      onValueChange: (newValue: number) => {
+        setRotateValue(newValue)
       },
-      handleResetField: (newDefaultValue) => {
+      handleResetField: (newDefaultValue: number) => {
         setRotateValue(newDefaultValue)
       }
     },
@@ -33,10 +33,10 @@ export default function App() {
       min: 0.25,
       max: 3,
       step: 0.05,
-      onValueChange: (e) => {
-        setScaleXValue(e.target.value)
+      onValueChange: (newValue: number) => {
+        setScaleXValue(newValue)
       },
-      handleResetField: (newDefaultValue) => {
+      handleResetField: (newDefaultValue: number) => {
         setScaleXValue(newDefaultValue)
       }
     },
@@ -48,10 +48,10 @@ export default function App() {
       min: 0.25,
       max: 3,
       step: 0.05,
-      onValueChange: (e) => {
-        setScaleYValue(e.target.value)
+      onValueChange: (newValue: number) => {
+        setScaleYValue(newValue)
       },
-      handleResetField: (newDefaultValue) => {
+      handleResetField: (newDefaultValue: number) => {
         setScaleYValue(newDefaultValue)
       }
     },
@@ -63,10 +63,10 @@ export default function App() {
       min: -89,
       max: 89,
       step: 1,
-      onValueChange: (e) => {
-        setSkewXValue(e.target.value)
+      onValueChange: (newValue: number) => {
+        setSkewXValue(newValue)
       },
-      handleResetField: (newDefaultValue) => {
+      handleResetField: (newDefaultValue: number) => {
         setSkewXValue(newDefaultValue)
       }
     },
@@ -78,10 +78,10 @@ export default function App() {
       min: -89,
       max: 89,
       step: 1,
-      onValueChange: (e) => {
-        setSkewYValue(e.target.value)
+      onValueChange: (newValue: number) => {
+        setSkewYValue(newValue)
       },
-      handleResetField: (newDefaultValue) => {
+      handleResetField: (newDefaultValue: number) => {
         setSkewYValue(newDefaultValue)
       }
     },
@@ -93,10 +93,10 @@ export default function App() {
       min: -89,
       max: 89,
       step: 1,
-      onValueChange: (e) => {
-        setTranslateXValue(e.target.value)
+      onValueChange: (newValue: number) => {
+        setTranslateXValue(newValue)
       },
-      handleResetField: (newDefaultValue) => {
+      handleResetField: (newDefaultValue: number) => {
         setTranslateXValue(newDefaultValue)
       }
     },
@@ -108,10 +108,10 @@ export default function App() {
       min: -89,
       max: 89,
       step: 1,
-      onValueChange: (e) => {
-        setTranslateYValue(e.target.value)
+      onValueChange: (newValue: number) => {
+        setTranslateYValue(newValue)
       },
-      handleResetField: (newDefaultValue) => {
+      handleResetField: (newDefaultValue: number) => {
         setTranslateYValue(newDefaultValue)
       }
     },
