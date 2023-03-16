@@ -9,5 +9,5 @@
 </div>
 
 <p align="center">
-  <img src="https://i.imgur.com/fV3o2M0.png" alt="Screenshot of demo" />
+  <img src="https://i.imgur.com/vgBM1fo.png" alt="Screenshot of demo" />
 </p>
