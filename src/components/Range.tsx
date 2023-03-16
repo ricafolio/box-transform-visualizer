@@ -1,12 +1,10 @@
-import { ChangeEvent } from 'react';
-
 interface Range {
   id: string
   label: string
-  defaultValue: number
   min: number
   max: number
   step: number
+  defaultValue: number
   currentValue: number
   handleValueChange: Function
   handleReset: Function
@@ -16,10 +14,10 @@ export default function Range(props: Range) {
   const {
     id,
     label,
-    defaultValue,
     min,
     max,
     step,
+    defaultValue,
     currentValue,
     handleValueChange,
     handleReset
