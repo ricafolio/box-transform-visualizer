@@ -158,7 +158,7 @@ export default function App() {
           )
         })}
 
-        <button className="btn-red" onClick={handleResetClick}>Reset to defaults</button>
+        <button className="btn-reset-all" onClick={handleResetClick}>Reset to defaults</button>
 
         <div>
           <h2>Code result</h2>
