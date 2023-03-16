@@ -7,7 +7,7 @@ interface Range {
   defaultValue: number
   currentValue: number
   handleValueChange: Function
-  handleReset: Function
+  handleResetField: Function
 }
 
 export default function Range(props: Range) {
@@ -20,7 +20,7 @@ export default function Range(props: Range) {
     defaultValue,
     currentValue,
     handleValueChange,
-    handleReset
+    handleResetField
   } = props
 
   return (
@@ -31,7 +31,7 @@ export default function Range(props: Range) {
           <input type="range" id={id} name={id} min={min} max={max} step={step} value={currentValue} onChange={handleValueChange} />
         </div>
         <div className="input-box-right">{currentValue}</div>
-        <button onClick={() => handleReset(defaultValue)}>reset</button>
+        <button onClick={() => handleResetField(defaultValue)}>reset</button>
       </div>
     </div>
   )
