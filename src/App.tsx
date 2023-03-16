@@ -161,7 +161,7 @@ export default function App() {
         <button className="btn-red" onClick={handleResetClick}>Reset to defaults</button>
 
         <div>
-          <h2>Code result:</h2>
+          <h2>Code result</h2>
           <code>
             transform: {JSON.stringify(boxStyle.transform).replace(/['"]+/g, '')}
           </code>
