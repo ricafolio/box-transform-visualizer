@@ -1,3 +1,5 @@
+import { NoStyleIcon } from './NoStyleIcon'
+
 interface Range {
   id: string
   label: string
@@ -31,7 +33,9 @@ export default function Range(props: Range) {
           <input type="range" id={id} name={id} min={min} max={max} step={step} value={currentValue} onChange={(e) => handleValueChange(e.target.value)} />
         </div>
         <div className="input-box-right">{currentValue}</div>
-        <button onClick={() => handleResetField(defaultValue)}>reset</button>
+        <button className="btn-reset" aria-label={`Reset ${label}`} onClick={() => handleResetField(defaultValue)}>
+          <NoStyleIcon />
+        </button>
       </div>
     </div>
   )

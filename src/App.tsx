@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ResetIcon } from './components/ResetIcon'
 import Range from './components/Range'
 
 export default function App() {
@@ -131,14 +132,14 @@ export default function App() {
   }
 
   return (
-    <>
+    <main>
       <div className="box-container">
         <div className="box" style={boxStyle}>
-          <span>Your Box</span>
+          <div className="box-text">Your Box</div>
         </div>
       </div>
 
-      <div className="controller">
+      <div className="settings-container">
         <h1>Box Transform Settings</h1>
 
         {ranges.map((field, i) => {
@@ -158,16 +159,19 @@ export default function App() {
           )
         })}
 
-        <button id="resetAllBtn" onClick={handleResetClick}>Reset to defaults</button>
+        <button className="btn-reset-all" onClick={handleResetClick}>
+          <ResetIcon />
+          Reset to defaults
+        </button>
 
         <div>
-          <h2>Code result:</h2>
+          <h2>Code result</h2>
           <code>
             transform: {JSON.stringify(boxStyle.transform).replace(/['"]+/g, '')}
           </code>
         </div>
       </div>
-    </>
+    </main>
   )
 }
 
