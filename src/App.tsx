@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ResetIcon } from './components/ResetIcon'
 import Range from './components/Range'
 
 export default function App() {
@@ -158,7 +159,10 @@ export default function App() {
           )
         })}
 
-        <button className="btn-reset-all" onClick={handleResetClick}>Reset to defaults</button>
+        <button className="btn-reset-all" onClick={handleResetClick}>
+          <ResetIcon />
+          Reset to defaults
+        </button>
 
         <div>
           <h2>Code result</h2>

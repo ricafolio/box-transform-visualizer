@@ -46,6 +46,13 @@ button {
   background-color: #eaecf6;
   transition: background-color 0.25s;
 
+  &.btn-reset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4em 1em;
+  }
+
   &:hover {
     background-color: #dfe2ee;
   }
@@ -60,11 +67,18 @@ button {
   }
 
   &.btn-reset-all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     background-color: #000;
     color: #fff;
     margin-top: 2rem;
     margin-bottom: 3rem;
+
+    & svg {
+      margin-right: 0.75rem;
+    }
 
     &:hover {
       background-color: #272727;
