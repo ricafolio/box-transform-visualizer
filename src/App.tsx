@@ -138,7 +138,7 @@ export default function App() {
         </div>
       </div>
 
-      <div className="controller">
+      <div className="settings-container">
         <h1>Box Transform Settings</h1>
 
         {ranges.map((field, i) => {
@@ -158,7 +158,7 @@ export default function App() {
           )
         })}
 
-        <button id="resetAllBtn" onClick={handleResetClick}>Reset to defaults</button>
+        <button className="btn-red" onClick={handleResetClick}>Reset to defaults</button>
 
         <div>
           <h2>Code result:</h2>
