@@ -131,10 +131,10 @@ export default function App() {
   }
 
   return (
-    <>
+    <main>
       <div className="box-container">
         <div className="box" style={boxStyle}>
-          <span>Your Box</span>
+          <div className="box-text">Your Box</div>
         </div>
       </div>
 
@@ -167,7 +167,7 @@ export default function App() {
           </code>
         </div>
       </div>
-    </>
+    </main>
   )
 }
 

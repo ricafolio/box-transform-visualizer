@@ -61,11 +61,19 @@ button {
   }
 }
 
+main {
+  display: flex;
+}
+
 .box-container {
-  width: 100%;
+  min-height: 90vh;
+  width: 50%;
   overflow: hidden;
   background-color: #e7e7e7;
   padding: 5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .box {
     width: 18rem;
@@ -75,7 +83,7 @@ button {
     border-radius: 7px;
     margin: 0 auto;
 
-    span {
+    .box-text {
       height: 100%;
       display: flex;
       justify-content: center;
@@ -85,11 +93,12 @@ button {
 }
 
 .settings-container {
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 50%;
   min-width: 320px;
+  margin: 0 auto;
+  padding: 2rem 4rem;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .field-container {
@@ -119,6 +128,21 @@ button {
   .input-box-right {
     width: 9%;
     margin: 0 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  main {
+    flex-direction: column;
+  }
+
+  .box-container {
+    min-height: 10vh;
+    width: 100%;
+  }
+
+  .settings-container {
+    width: 100%;
   }
 }
 
