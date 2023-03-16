@@ -165,6 +165,12 @@ main {
   }
 }
 
+@media (max-width: 640px) {
+  .settings-container {
+    padding: 0;
+  }
+}
+
 /* --- */
 
 input[type="range"] {
