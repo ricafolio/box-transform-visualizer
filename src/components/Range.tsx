@@ -1,4 +1,4 @@
-import { NoStyleIcon } from './NoStyleIcon'
+import { NoStyleIcon } from './icon/NoStyleIcon'
 
 interface Range {
   id: string

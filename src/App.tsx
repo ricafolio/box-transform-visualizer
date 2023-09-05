@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ResetIcon } from './components/ResetIcon'
+import { ResetIcon } from './components/icon/ResetIcon'
 import Range from './components/Range'
 
 export default function App() {
