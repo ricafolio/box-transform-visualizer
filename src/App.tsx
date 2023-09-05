@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import ResetIcon from './components/icon/ResetIcon'
-import Range from './components/Range'
+import InputRange from './components/InputRange'
 
 export default function App() {
   const [rotateValue, setRotateValue] = useState(0)
@@ -144,7 +144,7 @@ export default function App() {
 
         {ranges.map((field, i) => {
           return (
-            <Range
+            <InputRange
               key={`range-${i}`}
               id={field.id}
               label={field.label}
@@ -174,4 +174,3 @@ export default function App() {
     </main>
   )
 }
-

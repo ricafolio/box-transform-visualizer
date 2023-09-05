@@ -12,7 +12,7 @@ interface Range {
   handleResetField: Function
 }
 
-export default function Range(props: Range) {
+export default function InputRange(props: Range) {
   const {
     id,
     label,
