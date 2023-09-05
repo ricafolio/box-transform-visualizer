@@ -1,6 +1,6 @@
 import NoStyleIcon from './icon/NoStyleIcon'
 
-interface Range {
+interface InputRangeProps {
   id: string
   label: string
   min: number
@@ -12,7 +12,7 @@ interface Range {
   handleResetField: Function
 }
 
-export default function InputRange(props: Range) {
+export default function InputRange(props: InputRangeProps) {
   const {
     id,
     label,
