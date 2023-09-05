@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import InputRange from './components/InputRange'
 import ResetButton from './components/ResetButton'
+import ResultCodeSection from './components/ResultCodeSection'
 
 export default function App() {
   const [rotateValue, setRotateValue] = useState(0)
@@ -161,12 +162,7 @@ export default function App() {
 
         <ResetButton handleResetClick={handleResetClick} />
 
-        <div>
-          <h2>Code result</h2>
-          <code>
-            transform: {JSON.stringify(boxStyle.transform).replace(/['"]+/g, '')}
-          </code>
-        </div>
+        <ResultCodeSection code={boxStyle.transform} />
       </div>
     </main>
   )
