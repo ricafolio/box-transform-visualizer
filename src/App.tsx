@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import ResetIcon from './components/icon/ResetIcon'
 import InputRange from './components/InputRange'
+import ResetButton from './components/ResetButton'
 
 export default function App() {
   const [rotateValue, setRotateValue] = useState(0)
@@ -159,10 +159,7 @@ export default function App() {
           )
         })}
 
-        <button className="btn-reset-all" onClick={handleResetClick}>
-          <ResetIcon />
-          Reset to defaults
-        </button>
+        <ResetButton handleResetClick={handleResetClick} />
 
         <div>
           <h2>Code result</h2>
