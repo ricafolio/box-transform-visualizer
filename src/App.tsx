@@ -4,143 +4,206 @@ import ResetButton from './components/ResetButton'
 import ResultCodeSection from './components/ResultCodeSection'
 import ResultPreviewSection from './components/ResultPreviewSection'
 
+interface TransformValues {
+  rotate: number
+  scaleX: number
+  scaleY: number
+  skewX: number
+  skewY: number
+  translateX: number
+  translateY: number
+}
+
+interface InputRangeType {
+  id: string
+  label: string
+  defaultValue: number
+  currentValue: number
+  min: number
+  max: number
+  step: number
+  onValueChange: (newValue: number) => void
+  handleResetField: (newDefaultValue: number) => void
+}
+
+interface GeneratedStyleType {
+  transform: string
+}
+
 export default function App() {
-  const [rotateValue, setRotateValue] = useState(0)
-  const [scaleXValue, setScaleXValue] = useState(1)
-  const [scaleYValue, setScaleYValue] = useState(1)
-  const [skewXValue, setSkewXValue] = useState(0)
-  const [skewYValue, setSkewYValue] = useState(0)
-  const [translateXValue, setTranslateXValue] = useState(0)
-  const [translateYValue, setTranslateYValue] = useState(0)
-  const ranges = [
+  const defaultTransformValues: TransformValues = {
+    rotate: 0,
+    scaleX: 1,
+    scaleY: 1,
+    skewX: 0,
+    skewY: 0,
+    translateX: 0,
+    translateY: 0
+  }
+  const [transformValue, setTransformValue] = useState<TransformValues>(defaultTransformValues)
+
+  const inputRanges: InputRangeType[] = [
     {
       id: "rotate",
       label: "Rotate",
       defaultValue: 0,
-      currentValue: rotateValue,
+      currentValue: transformValue["rotate"],
       min: 0,
       max: 360,
       step: 1,
-      onValueChange: (newValue: number) => {
-        setRotateValue(newValue)
+      onValueChange: (newValue) => {
+        setTransformValue({
+          ...transformValue,
+          rotate: newValue
+        })
       },
-      handleResetField: (newDefaultValue: number) => {
-        setRotateValue(newDefaultValue)
+      handleResetField: (newDefaultValue) => {
+        setTransformValue({
+          ...transformValue,
+          rotate: newDefaultValue
+        })
       }
     },
     {
       id: "scaleX",
       label: "Scale X",
       defaultValue: 1,
-      currentValue: scaleXValue,
+      currentValue: transformValue["scaleX"],
       min: 0.25,
       max: 3,
       step: 0.05,
-      onValueChange: (newValue: number) => {
-        setScaleXValue(newValue)
+      onValueChange: (newValue) => {
+        setTransformValue({
+          ...transformValue,
+          scaleX: newValue
+        })
       },
-      handleResetField: (newDefaultValue: number) => {
-        setScaleXValue(newDefaultValue)
+      handleResetField: (newDefaultValue) => {
+        setTransformValue({
+          ...transformValue,
+          scaleX: newDefaultValue
+        })
       }
     },
     {
       id: "scaleY",
       label: "Scale Y",
       defaultValue: 1,
-      currentValue: scaleYValue,
+      currentValue: transformValue["scaleY"],
       min: 0.25,
       max: 3,
       step: 0.05,
-      onValueChange: (newValue: number) => {
-        setScaleYValue(newValue)
+      onValueChange: (newValue) => {
+        setTransformValue({
+          ...transformValue,
+          scaleY: newValue
+        })
       },
-      handleResetField: (newDefaultValue: number) => {
-        setScaleYValue(newDefaultValue)
+      handleResetField: (newDefaultValue) => {
+        setTransformValue({
+          ...transformValue,
+          scaleY: newDefaultValue
+        })
       }
     },
     {
       id: "skewX",
       label: "Skew X",
       defaultValue: 0,
-      currentValue: skewXValue,
+      currentValue: transformValue["skewX"],
       min: -89,
       max: 89,
       step: 1,
-      onValueChange: (newValue: number) => {
-        setSkewXValue(newValue)
+      onValueChange: (newValue) => {
+        setTransformValue({
+          ...transformValue,
+          skewX: newValue
+        })
       },
-      handleResetField: (newDefaultValue: number) => {
-        setSkewXValue(newDefaultValue)
+      handleResetField: (newDefaultValue) => {
+        setTransformValue({
+          ...transformValue,
+          skewX: newDefaultValue
+        })
       }
     },
     {
       id: "skewY",
       label: "Skew Y",
       defaultValue: 0,
-      currentValue: skewYValue,
+      currentValue: transformValue["skewY"],
       min: -89,
       max: 89,
       step: 1,
-      onValueChange: (newValue: number) => {
-        setSkewYValue(newValue)
+      onValueChange: (newValue) => {
+        setTransformValue({
+          ...transformValue,
+          skewY: newValue
+        })
       },
-      handleResetField: (newDefaultValue: number) => {
-        setSkewYValue(newDefaultValue)
+      handleResetField: (newDefaultValue) => {
+        setTransformValue({
+          ...transformValue,
+          skewY: newDefaultValue
+        })
       }
     },
     {
       id: "translateX",
       label: "Translate X",
       defaultValue: 0,
-      currentValue: translateXValue,
+      currentValue: transformValue["translateX"],
       min: -89,
       max: 89,
       step: 1,
-      onValueChange: (newValue: number) => {
-        setTranslateXValue(newValue)
+      onValueChange: (newValue) => {
+        setTransformValue({
+          ...transformValue,
+          translateX: newValue
+        })
       },
-      handleResetField: (newDefaultValue: number) => {
-        setTranslateXValue(newDefaultValue)
+      handleResetField: (newDefaultValue) => {
+        setTransformValue({
+          ...transformValue,
+          translateX: newDefaultValue
+        })
       }
     },
     {
       id: "translateY",
       label: "Translate Y",
       defaultValue: 0,
-      currentValue: translateYValue,
+      currentValue: transformValue["translateY"],
       min: -89,
       max: 89,
       step: 1,
-      onValueChange: (newValue: number) => {
-        setTranslateYValue(newValue)
+      onValueChange: (newValue) => {
+        setTransformValue({
+          ...transformValue,
+          translateY: newValue
+        })
       },
-      handleResetField: (newDefaultValue: number) => {
-        setTranslateYValue(newDefaultValue)
+      handleResetField: (newDefaultValue) => {
+        setTransformValue({
+          ...transformValue,
+          translateY: newDefaultValue
+        })
       }
     },
   ]
-  const boxStyle = {
-    transform: `rotate(${rotateValue}deg) ${translateXValue !== 0 || translateYValue !== 0 ? `translate(${translateXValue}px, ${translateYValue}px)` : ''} ${scaleXValue !== 1 || scaleYValue !== 1 ? `scale(${scaleXValue}, ${scaleYValue})` : ''} ${skewXValue !== 0 || skewYValue !== 0 ? `skew(${skewXValue}deg, ${skewYValue}deg)` : ''}`
-  }
 
-  function handleResetClick() {
-    setRotateValue(0)
-    setScaleXValue(1)
-    setScaleYValue(1)
-    setSkewXValue(0)
-    setSkewYValue(0)
-    setTranslateXValue(0)
-    setTranslateYValue(0)
+  const generatedStyle: GeneratedStyleType = {
+    transform: `rotate(${transformValue.rotate}deg) ${transformValue.translateX !== 0 || transformValue.translateY !== 0 ? `translate(${transformValue.translateX}px, ${transformValue.translateY}px)` : ''} ${transformValue.scaleX !== 1 || transformValue.scaleY !== 1 ? `scale(${transformValue.scaleX}, ${transformValue.scaleY})` : ''} ${transformValue.skewX !== 0 || transformValue.skewY!== 0 ? `skew(${transformValue.skewX}deg, ${transformValue.skewY}deg)` : ''}`
   }
 
   return (
     <main>
-      <ResultPreviewSection style={boxStyle} />
+      <ResultPreviewSection style={generatedStyle} />
 
       <div className="settings-container">
         <h1>Box Transform Settings</h1>
 
-        {ranges.map((field, i) => {
+        {inputRanges.map((field, i) => {
           return (
             <InputRange
               key={`range-${i}`}
@@ -157,9 +220,9 @@ export default function App() {
           )
         })}
 
-        <ResetButton handleResetClick={handleResetClick} />
+        <ResetButton handleResetClick={() => setTransformValue(defaultTransformValues)} />
 
-        <ResultCodeSection code={boxStyle.transform} />
+        <ResultCodeSection code={generatedStyle.transform} />
       </div>
     </main>
   )
