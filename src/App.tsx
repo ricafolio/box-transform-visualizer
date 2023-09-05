@@ -2,6 +2,7 @@ import { useState } from 'react'
 import InputRange from './components/InputRange'
 import ResetButton from './components/ResetButton'
 import ResultCodeSection from './components/ResultCodeSection'
+import ResultPreviewSection from './components/ResultPreviewSection'
 
 export default function App() {
   const [rotateValue, setRotateValue] = useState(0)
@@ -134,11 +135,7 @@ export default function App() {
 
   return (
     <main>
-      <div className="box-container">
-        <div className="box" style={boxStyle}>
-          <div className="box-text">Your Box</div>
-        </div>
-      </div>
+      <ResultPreviewSection style={boxStyle} />
 
       <div className="settings-container">
         <h1>Box Transform Settings</h1>
