@@ -1,16 +1,5 @@
 import NoStyleIcon from './icon/NoStyleIcon'
-
-interface InputRangeProps {
-  id: string
-  label: string
-  min: number
-  max: number
-  step: number
-  defaultValue: number
-  currentValue: number
-  handleValueChange: Function
-  handleResetField: Function
-}
+import { InputRangeProps } from '../types'
 
 export default function InputRange(props: InputRangeProps) {
   const {

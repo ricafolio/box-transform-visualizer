@@ -1,6 +1,4 @@
-interface ResultProps {
-  code: string
-}
+import { ResultProps } from '../types'
 
 export default function ResultCodeSection({ code }: ResultProps) {
   return (

@@ -1,8 +1,4 @@
-interface ResultPreviewSectionProps {
-  style: {
-    transform: string
-  }
-}
+import { ResultPreviewSectionProps } from '../types'
 
 export default function ResultPreviewSection({ style }: ResultPreviewSectionProps) {
   return (
