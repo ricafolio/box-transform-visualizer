@@ -17,12 +17,28 @@ export default function InputRange(props: InputRangeProps) {
   return (
     <div className="field-container">
       <label htmlFor={id}>{label}</label>
+
       <div className="input-box-container">
         <div className="input-box-left">
-          <input type="range" id={id} name={id} min={min} max={max} step={step} value={currentValue} onChange={(e) => handleValueChange(e.target.value)} />
+          <input 
+            type="range" 
+            id={id} 
+            name={id} 
+            min={min} 
+            max={max} 
+            step={step} 
+            value={currentValue} 
+            onChange={(e) => handleValueChange(parseFloat(e.target.value))}
+          />
         </div>
+
         <div className="input-box-right">{currentValue}</div>
-        <button className="btn-reset" aria-label={`Reset ${label}`} onClick={() => handleResetField(defaultValue)}>
+
+        <button 
+          className="btn-reset" 
+          aria-label={`Reset ${label}`} 
+          onClick={() => handleResetField(defaultValue)}
+        >
           <NoStyleIcon />
         </button>
       </div>

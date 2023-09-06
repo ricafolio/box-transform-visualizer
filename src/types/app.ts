@@ -16,7 +16,7 @@ export interface InputRangeType {
   min: number
   max: number
   step: number
-  onValueChange: (newValue: number) => void
+  handleValueChange: (newValue: number) => void
   handleResetField: (newDefaultValue: number) => void
 }
 

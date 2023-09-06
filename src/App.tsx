@@ -26,7 +26,7 @@ export default function App() {
       min: 0,
       max: 360,
       step: 1,
-      onValueChange: (newValue) => {
+      handleValueChange: (newValue) => {
         setTransformValue({
           ...transformValue,
           rotate: newValue
@@ -47,7 +47,7 @@ export default function App() {
       min: 0.25,
       max: 3,
       step: 0.05,
-      onValueChange: (newValue) => {
+      handleValueChange: (newValue) => {
         setTransformValue({
           ...transformValue,
           scaleX: newValue
@@ -68,7 +68,7 @@ export default function App() {
       min: 0.25,
       max: 3,
       step: 0.05,
-      onValueChange: (newValue) => {
+      handleValueChange: (newValue) => {
         setTransformValue({
           ...transformValue,
           scaleY: newValue
@@ -89,7 +89,7 @@ export default function App() {
       min: -89,
       max: 89,
       step: 1,
-      onValueChange: (newValue) => {
+      handleValueChange: (newValue) => {
         setTransformValue({
           ...transformValue,
           skewX: newValue
@@ -110,7 +110,7 @@ export default function App() {
       min: -89,
       max: 89,
       step: 1,
-      onValueChange: (newValue) => {
+      handleValueChange: (newValue) => {
         setTransformValue({
           ...transformValue,
           skewY: newValue
@@ -131,7 +131,7 @@ export default function App() {
       min: -89,
       max: 89,
       step: 1,
-      onValueChange: (newValue) => {
+      handleValueChange: (newValue) => {
         setTransformValue({
           ...transformValue,
           translateX: newValue
@@ -152,7 +152,7 @@ export default function App() {
       min: -89,
       max: 89,
       step: 1,
-      onValueChange: (newValue) => {
+      handleValueChange: (newValue) => {
         setTransformValue({
           ...transformValue,
           translateY: newValue
@@ -189,7 +189,7 @@ export default function App() {
               max={field.max}
               step={field.step}
               currentValue={field.currentValue}
-              handleValueChange={field.onValueChange}
+              handleValueChange={field.handleValueChange}
               handleResetField={field.handleResetField}
             />
           )
