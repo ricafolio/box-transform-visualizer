@@ -3,32 +3,7 @@ import InputRange from './components/InputRange'
 import ResetButton from './components/ResetButton'
 import ResultCodeSection from './components/ResultCodeSection'
 import ResultPreviewSection from './components/ResultPreviewSection'
-
-interface TransformValues {
-  rotate: number
-  scaleX: number
-  scaleY: number
-  skewX: number
-  skewY: number
-  translateX: number
-  translateY: number
-}
-
-interface InputRangeType {
-  id: string
-  label: string
-  defaultValue: number
-  currentValue: number
-  min: number
-  max: number
-  step: number
-  onValueChange: (newValue: number) => void
-  handleResetField: (newDefaultValue: number) => void
-}
-
-interface GeneratedStyleType {
-  transform: string
-}
+import { TransformValues, InputRangeType, GeneratedStyleType } from './types'
 
 export default function App() {
   const defaultTransformValues: TransformValues = {
